@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="../resource/css/bootstrap.css" rel="stylesheet">
+	<title>学生信息管理系统</title>
+	<style type="text/css">
+	.input-group,.btn {margin-bottom: 10px;}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h2 class="text-center">学生信息</h2>
+	<div class="panel panel-default">
+ 		<div class="panel-heading">
+    		<h3 class="panel-title text-center">详细信息</h3>
+  		</div>
+  		<div class="panel-body">
+	  		<form class="form" action="add" method="post">
+	   			<div class="input-group" style="width:100%">
+	      			<div class="input-group-addon">姓名</div>
+	      			<input name="name" id="name" type="text" class="form-control" placeholder="" value="{{ $name }}">
+	    		</div>
+	    		<div class="input-group" style="width:100%">
+	      			<div class="input-group-addon">性别</div>
+	      			<select name="gender" class="form-control">
+	      				<option id='man' value="男">男</option>
+	      				<option id='woman' value="女">女</option>
+	      			</select>
+	      			<script type="text/javascript">
+	      				var gender = '{{ $gender }}';
+	      				if(gender == '女')
+	      					document.getElementById('woman').selected = 'selected';
+	      			</script>
+	    		</div>
+	    		<div class="input-group" style="width:100%">
+	      			<div class="input-group-addon">年龄</div>
+	      			<input name="age" id="age" type="number" class="form-control" placeholder="" value="{{ $age }}">
+	    		</div>
+	    		<div class="input-group" style="width:100%">
+	      			<div class="input-group-addon">班级</div>
+	      			<input name="class" id="class" type="number" class="form-control" placeholder="" value="{{ $class }}">
+	    		</div>
+	    		<input type="button" class="btn btn-default" value="返回主页" style="width:100%" onclick="location='../home'" />
+			</form>
+  		</div>
+	</div>
+</div>
+</body>
+</html>

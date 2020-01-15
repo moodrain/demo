@@ -1,0 +1,18 @@
+<ul id="nav ul" class="nav nav-tabs">
+  <li role="presentation"><a href="home" >首页</a></li>
+  <li role="presentation"><a href="student" >学生列表</a></li>
+  <li role="presentation"><a href="#" >课程列表</a></li>
+  <li role="presentation"><a href="#" >班级情况</a></li>
+  <li role="presentation"><a href="#" >分数排序</a></li>
+</ul>
+<script type="text/javascript">
+navSwapNum({{ $activeNavTag }});
+function navSwapNum(num)
+{
+	var ul = document.getElementById("nav ul");
+	var lis = ul.getElementsByTagName("li");
+	for(var i = 0;i < lis.length;i++)
+		lis[i].className = "";
+	lis[num].className = "active";
+}
+</script>

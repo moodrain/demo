@@ -1,0 +1,60 @@
+<ul id="nav ul" class="nav nav-tabs">
+  <li role="presentation"><a href="home" >首页</a></li>
+  <li role="presentation"><a href="student" >学生列表</a></li>
+  <li role="presentation"><a href="#" >课程列表</a></li>
+  <li role="presentation"><a href="#" >班级情况</a></li>
+  <li role="presentation"><a href="#" >分数排序</a></li>
+</ul>
+<script type="text/javascript">
+navSwapNum(0);
+function navSwapNum(num)
+{
+	var ul = document.getElementById("nav ul");
+	var lis = ul.getElementsByTagName("li");
+	for(var i = 0;i < lis.length;i++)
+		lis[i].className = "";
+	lis[num].className = "active";
+}
+</script><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="./resource/css/bootstrap.css" rel="stylesheet">
+	<title>学生信息管理系统</title>
+	<style type="text/css">
+	.list-group-item {margin-bottom: 10px;}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h2 class="text-center">首页</h2>
+	<div class="panel panel-default">
+ 		<div class="panel-heading">
+    		<h3 class="panel-title text-center">参数概览</h3>
+  		</div>
+  		<div class="panel-body">
+  			<div class="list-group text-center">
+  				<li class="list-group-item" style="width:100%">学生总数：1</li>
+	  			<li class="list-group-item" style="width:100%">课程总数：3</li>
+			</div>
+  		</div>
+	</div>
+	<div class="panel panel-default">
+ 		<div class="panel-heading">
+    		<h3 class="panel-title text-center">功能模块</h3>
+  		</div>
+  		<div class="panel-body">
+  			<div class="list-group">
+  				<button type="button" class="btn btn-default list-group-item" style="width:100%" onclick="location='add'">添加学生</button>
+	  			<button type="button" class="btn btn-default list-group-item" style="width:100%">删除学生</button>
+				<button type="button" class="btn btn-default list-group-item" style="width:100%">修改学生</button>
+				<button type="button" class="btn btn-default list-group-item" style="width:100%">修改成绩</button>
+				<button type="button" class="btn btn-default list-group-item" style="width:100%">班级情况</button>
+				<button type="button" class="btn btn-default list-group-item" style="width:100%">分数排序</button>
+			</div>
+  		</div>
+	</div>
+</div>
+</body>
+</html>
